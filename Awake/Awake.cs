@@ -13,8 +13,11 @@ namespace Awake
 
         private static void Main()
         {
-            for (;DateTime.Now < EndTime; Thread.Sleep(Random.Next(6000, 180000)))
+            while (DateTime.Now < EndTime)
+            {
                 SetThreadExecutionState(State);
+                Thread.Sleep(Random.Next(6000, 180000));
+            } 
         }
 
         [FlagsAttribute]
