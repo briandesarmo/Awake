@@ -6,8 +6,7 @@ namespace Awake
 {
     internal class Awake
     {
-        private static readonly DateTime StartTime = DateTime.Now;
-        private static readonly DateTime EndTime = StartTime.AddHours(8);
+        private static readonly DateTime EndTime = DateTime.Now.AddHours(8);
         private static readonly Random Random = new Random();
         private static ExecutionState State => ExecutionState.EsContinuous | ExecutionState.EsAwayModeRequired | ExecutionState.EsDisplayRequired | ExecutionState.EsSystemRequired;
 
